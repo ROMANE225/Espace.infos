@@ -1,0 +1,167 @@
+  <html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon site web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <a href="#"><img src="rome.jpg" alt="Logo de mon site" class="image"></a>
+    <a href="#">Mon site web</a>
+    <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#a_propos">À propos de moi</a></li>
+        <li><a href="#contact">Suivez mes actualités</a></li>
+    </ul>
+</header>  
+<div class="page">
+    <div class="bienvenue" id="accueil">
+        <img src="haking.jpg" alt="Hacking">
+
+        <div>
+            <h1>Merci de visiter mon site web !</h1>
+            <p>
+                Je suis N'GUESSAN ROMANE TANOH, développeur de sites web et d'applications, passionné par mon métier.
+                Je suis motivé à monter en compétences et à me perfectionner dans le domaine.
+                Prêt à relever les défis, j’ambitionne d’apporter une réelle valeur ajoutée à mes compétences.
+                J’encourage tous mes collègues à persévérer : ce métier n’est pas facile, mais avec de la passion,
+                nous irons au bout de nos objectifs.
+            </p>
+        </div>
+    </div>
+
+    <div class="separer"></div>
+
+    <div class="a_propos" id="a_propos">
+        <h2 class="title">À propos</h2>
+        <div class="picture_groupes">
+            <div class="info_picture_groupes">
+                <div class="picture_propos_test">
+                    <h3>Informations</h3>
+                    Ce site contient plus d’informations qu’on pourrait le croire. 
+                    Soutenez les développeurs, car l’avenir du monde est entre leurs mains. 
+                    La qualité du leadership et la rigueur du travail font d’eux des professionnels spécialisés et motivés.
+                    Soyons humbles, car c’est en forgeant qu’on devient forgeron.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="separer"></div>
+
+    <div class="contact" id="contact">
+        <h2 class="title_gategorie">Contact</h2>
+        <div class="forme_contact_contener">
+            <form action="" method="post" class="forme_contact">
+                <div class="forme_top">
+                    <div class="forme_left">
+                        <div>
+                            <label for="nom">Nom</label>
+                            <input type="text" name="nom" placeholder="Veuillez entrer votre nom">
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" placeholder="Entrez votre email">
+                        </div>
+                    </div>
+                    <div class="forme_rigth">
+                        <label for="message">Message</label>
+                        <textarea name="message" cols="30" rows="5" placeholder="envoyer un message"></textarea>
+                    </div>
+                </div>
+                <div class="forme_button">
+                    <input type="submit" name="envoyer" value="Envoyer">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="separer"></div>
+    
+    <h2 class="title">Commentaire</h2>
+    <div class="commentaire">
+        <div class="title_categorie">
+            <div class="commentaire">  
+                <img src="ram.jpg" alt="" class="commentaire_pp">
+                <div class="commentaire_text">
+                    <h3 class="commentaire_nom">Claude Dupon</h3>
+                    <p class="commentaire_message">L’effort fait des forts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+
+    <div class="commentaire">
+        <div class="title_categorie">
+            <div class="commentaire">  
+                <img src="acc_elite.jpg" alt="" class="commentaire_pp">
+                <div class="commentaire_text">
+                    <h3 class="commentaire_nom">Mikael Dolph</h3>
+                    <p class="commentaire_message">L'homme conscient réflechi avant d'agir</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; Mon site web 2025
+    </footer>
+</div>
+         <script>
+// Scroll fluide pour les liens de navigation
+document.querySelectorAll("header ul li a").forEach(link => {
+    link.addEventListener("click", function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 50,
+                behavior: "smooth"
+            });
+        }
+    });
+});
+
+// Validation du formulaire de contact
+document.querySelector(".forme_contact").addEventListener("submit", function(e) {
+    e.preventDefault(); // Empêche l’envoi automatique
+
+    const nom = this.nom.value.trim();
+    const email = this.email.value.trim();
+    const message = this.message.value.trim();
+
+    if (!nom || !email || !message) {
+        alert("Veuillez remplir tous les champs avant d’envoyer.");
+        return;
+    }
+
+    
+    alert("Merci pour votre message, " + nom + " ! Nous vous contacterons bientôt.");
+    this.reset(); // Réinitialise le formulaire
+});
+</script> <script>
+document.querySelector(".forme_contact").addEventListener("submit", function(e) {
+    e.preventDefault(); // Empêche l’envoi automatique
+
+    // Sélectionne tous les champs input et textarea
+    const inputs = this.querySelectorAll("input[type='text'], input[type='email'], textarea");
+
+    inputs.forEach(input => {
+        if (input.value.trim() !== "") {
+            input.classList.add("input-active");
+        } else {
+            input.classList.remove("input-active"); // Enlève si vide
+        }
+    });
+
+    alert("Merci pour votre message !");
+
+    
+});
+</script>
+
+
+</body>
+</html>

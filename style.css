@@ -1,0 +1,230 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #222;
+    color: white;
+    background-color: #1a73e8;
+    font-size: 20px;
+}
+header .image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    margin-right: 15px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin: 0 10px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #f4c542;
+}
+/* SECTION GENERALE */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+.page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* IMAGE DE BIENVENUE */
+.bienvenue {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    
+}
+.bienvenue:hover{
+  transform: scale(1.06);
+  /* background: teal; */
+}
+
+.bienvenue img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* TEXTE DE BIENVENUE */
+.bienvenue h1 {
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+.bienvenue p {
+    line-height: 1.6;
+}
+
+/* SÉPARATEUR */
+.separer {
+    height: 3px;
+    background-color: hwb(34 9% 5%);
+    margin: 40px 0;
+}
+
+/* À PROPOS */
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.picture_groupes {
+    display: flex;
+    justify-content: center;
+}
+
+.picture_propos_test {
+    max-width: 700px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+/* CONTACT */
+.title_gategorie {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.forme_contact_contener {
+    display: flex;
+    justify-content: center;
+}
+
+.forme_contact {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.forme_top {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.forme_left, .forme_rigth {
+    flex: 1;
+    min-width: 300px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+  .input-active {
+    border: 2px solid #1a73e8;
+    background-color: #e6f0ff;
+}
+
+
+.forme_button {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #155cc0;
+}
+
+/* COMMENTAIRE */
+.commentaire {
+    display: flex;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.commentaire_pp {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.commentaire_text h3 {
+    margin: 0;
+    color: #1a73e8;
+}
+
+.commentaire_text p {
+    margin: 5px 0 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a73e8;
+    color: white;
+    margin-top: 40px;
+}
+ 
+

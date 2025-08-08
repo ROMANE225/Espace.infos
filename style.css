@@ -1,112 +1,110 @@
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 30px;
-    background-color: #222;
-    color: white;
-    background-color: #1a73e8;
-    font-size: 20px;
-}
-header .image {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #fff;
-    margin-right: 15px;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-}
-
-header ul {
-    display: flex;
-    list-style: none;
+  /* RESET & BASE */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-header ul li {
-    margin: 0 10px;
-}
-
-header ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-header ul li a:hover {
-    color: #f4c542;
-}
-/* SECTION GENERALE */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f3f3f3;
+    background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
+/* CONTAINER PRINCIPAL */
 .page {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
 }
 
-/* IMAGE DE BIENVENUE */
+/* HEADER */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #1a73e8;
+    color: white;
+}
+
+header .image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    margin-right: 10px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 10px;
+}
+
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+header ul li {
+    margin: 5px 10px;
+}
+
+header ul li a:hover {
+    color: #f4c542;
+}
+
+/* BIENVENUE */
 .bienvenue {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    
+    transition: transform 0.3s ease;
 }
-.bienvenue:hover{
-  transform: scale(1.06);
-  /* background: teal; */
+
+.bienvenue:hover {
+    transform: scale(1.03);
 }
 
 .bienvenue img {
-    max-width: 300px;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
+    flex: 1 1 300px;
 }
 
-/* TEXTE DE BIENVENUE */
+.bienvenue div {
+    flex: 1 1 300px;
+}
+
 .bienvenue h1 {
     color: #1a73e8;
     margin-bottom: 10px;
 }
 
-.bienvenue p {
-    line-height: 1.6;
-}
-
 /* SÉPARATEUR */
 .separer {
     height: 3px;
-    background-color: hwb(34 9% 5%);
+    background-color: #f4c542;
     margin: 40px 0;
 }
 
 /* À PROPOS */
 .title {
     text-align: center;
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 20px;
     color: #444;
 }
@@ -114,6 +112,7 @@ body {
 .picture_groupes {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .picture_propos_test {
@@ -121,13 +120,12 @@ body {
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
-    line-height: 1.6;
 }
 
 /* CONTACT */
 .title_gategorie {
     text-align: center;
-    font-size: 26px;
+    font-size: 24px;
     margin-bottom: 20px;
     color: #222;
 }
@@ -139,7 +137,7 @@ body {
 
 .forme_contact {
     background-color: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     width: 100%;
     max-width: 700px;
@@ -147,13 +145,12 @@ body {
 
 .forme_top {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .forme_left, .forme_rigth {
-    flex: 1;
-    min-width: 300px;
+    flex: 1 1 300px;
 }
 
 label {
@@ -164,16 +161,17 @@ label {
 
 input[type="text"], input[type="email"], textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #aaa;
     border-radius: 5px;
+    font-size: 16px;
 }
-  .input-active {
+
+.input-active {
     border: 2px solid #1a73e8;
     background-color: #e6f0ff;
 }
-
 
 .forme_button {
     text-align: center;
@@ -183,23 +181,26 @@ input[type="submit"] {
     background-color: #1a73e8;
     color: white;
     border: none;
-    padding: 10px 30px;
+    padding: 12px 30px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 input[type="submit"]:hover {
     background-color: #155cc0;
 }
 
-/* COMMENTAIRE */
+/* COMMENTAIRES */
 .commentaire {
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .commentaire_pp {
@@ -207,6 +208,7 @@ input[type="submit"]:hover {
     height: 60px;
     border-radius: 50%;
     background-color: #ccc;
+    object-fit: cover;
 }
 
 .commentaire_text h3 {
@@ -226,5 +228,42 @@ footer {
     color: white;
     margin-top: 40px;
 }
- 
 
+/* 📱 MEDIA QUERY POUR TÉLÉPHONES */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    .bienvenue {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .forme_top {
+        flex-direction: column;
+    }
+
+    .commentaire {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .commentaire_pp {
+        margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+}
